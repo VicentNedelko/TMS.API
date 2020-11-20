@@ -8,6 +8,11 @@ namespace TMS.API.Core.Interfaces
 {
     public interface IRequestService
     {
-        public Task<Example> GetInfoReqAsync();
+        public Task<Example> GetExampleReqAsync();
     }
+    public interface IRequestCore
+    {
+        public Task<Cores> GetCoreInfoAsync();
+    }
+
 }

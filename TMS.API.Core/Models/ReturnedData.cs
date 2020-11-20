@@ -37,7 +37,7 @@ namespace TMS.API.Core.Models
             public string wikipedia { get; set; }
         }
 
-        public class Core
+        public class Cores
         {
             public string core { get; set; }
             public int flight { get; set; }
@@ -76,7 +76,7 @@ namespace TMS.API.Core.Models
             public DateTime date_local { get; set; }
             public string date_precision { get; set; }
             public bool upcoming { get; set; }
-            public IList<Core> cores { get; set; }
+            public IList<Cores> cores { get; set; }
             public string id { get; set; }
         }
 }

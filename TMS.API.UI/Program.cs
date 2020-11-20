@@ -9,9 +9,17 @@ namespace TMS.API.UI
     {
         static void Main(string[] args)
         {
-            IRequestService reqData = new RequestService();
-            var result = reqData.GetInfoReqAsync().GetAwaiter().GetResult();
+            RequestService reqData = new RequestService();
+            var result = reqData.GetExampleReqAsync().GetAwaiter().GetResult();
+            var resCores = reqData.GetCoreInfoAsync().GetAwaiter().GetResult();
             Console.WriteLine(result.details);
+            Console.WriteLine(result.success);
+            Console.WriteLine("CREW members : ");
+            foreach(string member in result.ships)
+            {
+                Console.WriteLine(member);
+            }
+            Console.WriteLine($" landing type = {resCores.landing_type}");
             Console.ReadKey();
         }
     }
